@@ -1,0 +1,20 @@
+export const colors = {
+  background: '#0D0D2B',
+  backgroundSecondary: '#1a1a4e',
+  surface: 'rgba(26, 26, 78, 0.75)',
+  surfaceLight: 'rgba(108, 63, 160, 0.15)',
+  accent: '#6C3FA0',
+  accentBright: '#E040FB',
+  accentMuted: 'rgba(224, 64, 251, 0.15)',
+  text: '#FFFFFF',
+  textSecondary: '#B0B0C8',
+  textMuted: '#6060A0',
+  border: 'rgba(108, 63, 160, 0.35)',
+  star: '#FFD700',
+  gradients: {
+    background: ['#0D0D2B', '#1a1a4e'] as const,
+    hero: ['transparent', 'rgba(13, 13, 43, 0.6)', '#0D0D2B'] as const,
+    accent: ['#6C3FA0', '#E040FB'] as const,
+    card: ['rgba(13, 13, 43, 0.0)', 'rgba(13, 13, 43, 0.95)'] as const,
+  },
+} as const;

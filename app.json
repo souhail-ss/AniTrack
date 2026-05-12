@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "AniTrack",
+    "slug": "anitrack",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0D0D2B",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0D0D2B"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.anitrack.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0D0D2B"
+      },
+      "package": "com.anitrack.app"
+    },
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-asset"
+    ]
+  }
+}
