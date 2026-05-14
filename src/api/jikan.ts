@@ -52,4 +52,7 @@ export const jikanApi = {
 
   getAnimeDetail: (id: number) =>
     get<JikanResponse<Anime>>(`/anime/${id}/full`),
+
+  searchAnime: (query: string) =>
+    get<JikanResponse<Anime[]>>('/anime', { q: query, limit: 6, sfw: true }),
 };
