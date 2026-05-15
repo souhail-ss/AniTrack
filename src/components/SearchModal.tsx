@@ -121,7 +121,7 @@ export default function SearchModal({ visible, onClose }: Props) {
             {/* Results */}
             <FlatList
               data={results}
-              keyExtractor={(item) => String(item.mal_id)}
+              keyExtractor={(item, index) => `${item.mal_id}-${index}`}
               keyboardShouldPersistTaps="handled"
               contentContainerStyle={styles.listContent}
               renderItem={({ item }) => (
