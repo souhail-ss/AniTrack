@@ -24,8 +24,8 @@ interface Props extends BottomTabBarProps {
 export default function CustomTabBar({ state, descriptors, navigation, onSearchPress }: Props) {
   const insets = useSafeAreaInsets();
 
-  const leftRoutes = state.routes.slice(0, 2);  // Home, Latest
-  const rightRoutes = state.routes.slice(2);     // Top
+  const leftRoutes = state.routes.slice(0, 1);  // Home
+  const rightRoutes = state.routes.slice(1);     // Latest, Top
 
   function renderTab(route: (typeof state.routes)[0], globalIndex: number) {
     const { options } = descriptors[route.key];
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     color: colors.accentBright,
   },
   centerSpacer: {
-    width: FAB_SIZE + 20,
+    width: FAB_SIZE + 8,
   },
   fabWrapper: {
     position: 'absolute',
