@@ -106,7 +106,7 @@ export default function TopScreen() {
               ? Array.from({ length: 10 }).map((_, i) => <SkeletonListItem key={i} />)
               : anime.map((a, index) => (
                   <AnimeListItem
-                    key={a.mal_id}
+                    key={`${a.mal_id}-${index}`}
                     anime={a}
                     onPress={() => goDetail(a)}
                     rank={index + 1}

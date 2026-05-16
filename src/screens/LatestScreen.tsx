@@ -153,9 +153,9 @@ export default function LatestScreen() {
                     </Text>
                   </View>
                   <View style={styles.listPad}>
-                    {grouped[day].map((a) => (
+                    {grouped[day].map((a, i) => (
                       <AnimeListItem
-                        key={a.mal_id}
+                        key={`${a.mal_id}-${i}`}
                         anime={a}
                         onPress={() => goDetail(a)}
                         extraBadge={

@@ -119,8 +119,8 @@ export default function HomeScreen() {
           >
             {loading
               ? Array.from({ length: 6 }).map((_, i) => <SkeletonCard key={i} />)
-              : trending.map((a) => (
-                  <AnimeCard key={a.mal_id} anime={a} onPress={() => goDetail(a)} />
+              : trending.map((a, i) => (
+                  <AnimeCard key={`${a.mal_id}-${i}`} anime={a} onPress={() => goDetail(a)} />
                 ))}
           </ScrollView>
 
@@ -129,8 +129,8 @@ export default function HomeScreen() {
           <View style={styles.listSection}>
             {loading
               ? Array.from({ length: 5 }).map((_, i) => <SkeletonListItem key={i} />)
-              : seasonal.map((a) => (
-                  <AnimeListItem key={a.mal_id} anime={a} onPress={() => goDetail(a)} />
+              : seasonal.map((a, i) => (
+                  <AnimeListItem key={`${a.mal_id}-${i}`} anime={a} onPress={() => goDetail(a)} />
                 ))}
           </View>
 
@@ -139,8 +139,8 @@ export default function HomeScreen() {
           <View style={styles.listSection}>
             {loading
               ? Array.from({ length: 5 }).map((_, i) => <SkeletonListItem key={i} />)
-              : popular.map((a) => (
-                  <AnimeListItem key={a.mal_id} anime={a} onPress={() => goDetail(a)} />
+              : popular.map((a, i) => (
+                  <AnimeListItem key={`${a.mal_id}-${i}`} anime={a} onPress={() => goDetail(a)} />
                 ))}
           </View>
         </ScrollView>
